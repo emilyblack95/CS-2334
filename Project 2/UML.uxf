@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>470</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-fullName: Name
+-dob: String
+-cityLoc: String
+-stateLoc: String
+--
++Person(fullName: Name, dob: String, cityLoc: String, stateLoc: String)
++getFullName(): Name
++getDOB(): String
++getCityLOC(): String
++getStateLOC(): String
++toString(): String
++compareTo(other: Person): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>300</y>
+      <w>450</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+_-listOfData: ArrayList&lt;Person&gt;_
+_-lastQweryLine: String_
+_-fileNameUserChooses: String_
+--
+_+fillArrayList(fileName: String): ArrayList&lt;Person&gt;_
+_+writeOut(lastQweryLine: String, fileNameUserChooses: String): void_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>220</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>20</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_/&lt;&lt;Interface&gt;&gt;/_
+/Comparable&lt;T&gt;/
+--
+--
+/+compareTo(T o): int/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>330</y>
+      <w>410</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Name
+--
+-firstName: String
+-middleName: String
+-secondMiddleName: String
+-thirdMiddleName: String
+-lastName: String
+--
++Name(firstName: String, middleName: String, lastName: String)
++Name(firstName: String, lastName: String)
++Name(firstName: String, middleName: String, secondMiddleName: String, lastName: String)
++Name(firstName: String, middleName: String, secondMiddleName: String, thirdMiddleName: String, lastName: String)
++getFirstName(): String
++getMiddleName(): String
++getSecondMiddleName(): String
++getThirdMiddleName(): String
++getLastName(): String
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>20</y>
+      <w>350</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CompareLastName
+--
+--
++compare(Person person, Person anotherPerson): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>190</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>_/&lt;&lt;Interface&gt;&gt;/_
+/Comparator&lt;T&gt;/
+--
+--
+/+compare(T o1, T o2): int/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>80</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>100</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>80</y>
+      <w>460</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;220.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>220</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>320</y>
+      <w>430</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>City
+--
+-residents: ArrayList&lt;Person&gt;
+-myState: State
+-cityName: String
+--
++City()
++City(newCity: String, s: State)
++toString(): String
++getResidentList(): ArrayList&lt;Person&gt;
++getState: State
++fillResidentList(listOfData: ArrayList&lt;Person&gt;): ArrayList&lt;Person&gt;
++equals(other: City): boolean
++compareTo(other: City): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>200</y>
+      <w>440</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>120</y>
+      <w>380</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>State
+--
+-cities: ArrayList&lt;City&gt;
+-stateName: String
+--
++State()
++State(s: String)
++getCityList(): ArrayList&lt;City&gt; 
++toString(): String
++fillCityList(listOfData: ArrayList&lt;Person&gt;): ArrayList&lt;City&gt;
++equals(other: State):boolean
++compareTo(other: State): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>100</y>
+      <w>470</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;450.0;70.0</additional_attributes>
+  </element>
+</diagram>
