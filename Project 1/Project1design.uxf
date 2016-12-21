@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <help_text/>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>30</y>
+      <w>770</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-fullName: String
+-dateOfBirth: Date
+-cityOfBirth: String
+-stateOfBirth: String
+-dateOfDeath: Date
+-ageFinal: int
+_-errorCount: int_
+--
++Person(fullName: String, dateOfBirth: Date, cityOfBirth: String, stateOfBirth: String)
++Person(fullName: String, dateOfBirth: Date, cityOfBirth: String, stateOfBirth: String, dateOfDeath: Date)
++Person(fullName: String, dateOfBirth: Date, cityOfBirth: String, stateOfBirth: String, age: int)
++Person(fullName: String, dateOfBirth: Date, cityOfBirth: String, stateOfBirth: String, dateOfDeath: Date, age: int)
++getFullName(): String
++getDateOfBirth(): Date
++getCityOfBirth(): String
++getStateOfBirth(): String
++getDateOfDeath(): Date
++toString(): String
+_+calculateDeathAge(DOB: Date, DOD: Date): int_
+_+calculateCurrentAge(DOB: Date): int_
+_+getNumberOfErrors(): void_
+bg=red
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>430</y>
+      <w>550</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Driver
+--
+-listOfData: ArrayList&lt;Person&gt;
+-fileName: String
+_-frame: Component_
+--
+_+fillArray(fileName: String): ArrayList&lt;Person&gt;_
+_+searchByName(listOfData: ArrayList&lt;Person&gt;, input: Scanner): ArrayList&lt;Person&gt;_
+bg=red
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>320</y>
+      <w>320</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;110.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>30</y>
+      <w>310</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Date
+--
+-month: int
+-day: int
+-year: int
+-currentAge: int
+--
++Date()
++Date(month: int, day: int, year: int)
++getYear(): int
++getDay(): int
++getMonth(): int
++toString(): String
++setCurrentAge(DOB: Date): int
++setDeathAge(DOB: Date, DOD: Date): int
+_+toDate(input: String): Date_
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>60</y>
+      <w>140</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>120.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
